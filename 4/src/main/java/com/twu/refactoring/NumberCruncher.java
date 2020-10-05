@@ -8,17 +8,17 @@ public class NumberCruncher {
     }
 
     public int countEven() {
-        int count = 0;
-        for (int number : numbers) {
-            if (number % 2 == 0) count++;
-        }
-        return count;
+        return countEvenAndOdd(0);
     }
 
     public int countOdd() {
+        return countEvenAndOdd(1);
+    }
+
+    private int countEvenAndOdd(int i) {
         int count = 0;
         for (int number : numbers) {
-            if (number % 2 == 1) count++;
+            if (number % 2 == i) count++;
         }
         return count;
     }
@@ -38,4 +38,5 @@ public class NumberCruncher {
         }
         return count;
     }
+
 }
